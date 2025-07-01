@@ -1,13 +1,6 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<h1>Articles</h1>
+<h1>¡Hola, Rails!</h1>
 <p>😁<p> 
-
-  <ul>
-  <% @articles.each do |article| %>
-    <li>Título <%= article.title %></li>
-  <% end %>
-</ul>
-
 <ul>
   <% @articles.each do |article| %>
     <li>
@@ -15,3 +8,14 @@
     </li>
   <% end %>
 </ul>
+
+<h1>Artículos</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Nuevo Artículo", new_article_path %>
