@@ -9,3 +9,9 @@
                     turbo_confirm: "¿Estás seguro?"
                   } %></li>
 </ul>
+
+<h2>Comentarios</h2>
+<%= render @article.comments %>
+
+<h2>Agregar un comentario:</h2>
+<%= render "comments/form", article: @article %>
